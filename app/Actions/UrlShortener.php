@@ -7,6 +7,7 @@ use App\Models\ShortUrl;
 class UrlShortener
 {
     private const CHARACTERS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
     private const CODE_LENGTH = 6;
 
     public function encode(string $url): ShortUrl
@@ -18,7 +19,7 @@ class UrlShortener
         return ShortUrl::create([
             'original_url' => $url,
             'url_key' => $code,
-            'short_url' => $this->buildShortenedUrl($code)
+            'short_url' => $this->buildShortenedUrl($code),
         ]);
     }
 
@@ -33,11 +34,12 @@ class UrlShortener
         for ($i = 0; $i < self::CODE_LENGTH; $i++) {
             $code .= self::CHARACTERS[random_int(0, strlen(self::CHARACTERS) - 1)];
         }
+
         return $code;
     }
 
     private function buildShortenedUrl(string $code): string
     {
-        return config('app.url') . '/' . $code;
+        return config('app.url').'/'.$code;
     }
 }
