@@ -23,9 +23,9 @@ class UrlShortener
         ]);
     }
 
-    public function decode(string $url): ?ShortUrl
+    public function decode(string $urlKey): ?ShortUrl
     {
-        return ShortUrl::where('short_url', $url)->first();
+        return ShortUrl::where('url_key', $urlKey)->first();
     }
 
     private function generateCode(): string
