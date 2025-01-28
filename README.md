@@ -1,6 +1,12 @@
 # SHR (Shortest) URL Shortener
 A simple URL shortener.
 
+## Postman
+### collection
+https://github.com/abrardev99/shr/blob/dev/content/UrlShortner.postman_collection.json
+
+### Demo
+
 ## Setup Locally
 In terms of local setup, you can use the following requirements:
 - PHP 8.2 - with SQLite, GD, and other common extensions.
