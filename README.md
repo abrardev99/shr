@@ -2,10 +2,13 @@
 A simple URL shortener.
 
 ## Postman
-### collection
+### Collection
 https://github.com/abrardev99/shr/blob/dev/content/UrlShortner.postman_collection.json
 
 ### Demo
+https://github.com/user-attachments/assets/f2438fd7-77b4-4a1f-b251-b9f1f4826652
+
+
 
 ## Setup Locally
 In terms of local setup, you can use the following requirements:
