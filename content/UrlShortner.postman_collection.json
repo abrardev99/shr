@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "77ac2f09-ff7a-4cae-8361-fd429ae4fd76",
+		"name": "UrlShortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36417280"
+	},
+	"item": [
+		{
+			"name": "encode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"https://www.google.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://shr.test/api/encode",
+					"protocol": "http",
+					"host": [
+						"shr",
+						"test"
+					],
+					"path": [
+						"api",
+						"encode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://shr.test/api/decode/http://shr.test/api/encode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://shr.test/api/decode/http://shr.test/DwoluJ",
+					"protocol": "http",
+					"host": [
+						"shr",
+						"test"
+					],
+					"path": [
+						"api",
+						"decode",
+						"http:",
+						"",
+						"shr.test",
+						"DwoluJ"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
