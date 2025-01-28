@@ -18,6 +18,9 @@ class ShortURLFactory extends Factory
     public function definition(): array
     {
         return [
+            'original_url' => $url = $this->faker->url(),
+            'url_key' => $code = Str::random(8),
+            'short_url' => config('app.url') . '/' . $code,
         ];
     }
 }
