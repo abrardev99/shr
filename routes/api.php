@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\DecodeController;
+use App\Http\Controllers\EncodeUrlController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+Route::post('encode', EncodeUrlController::class);
+Route::get('decode/{shortUrl}', DecodeController::class)
+    ->where('shortUrl', '.*');
